@@ -82,3 +82,7 @@ The interface was implemented based on the provided Figma design with attention 
 - Add automated unit and integration tests.
 - Replace the local JSON source with a backend API.
 - Improve accessibility (ARIA attributes and keyboard navigation).
+
+## Live Demo
+
+🔗 https://test-front-three-kappa.vercel.app/
