@@ -1,16 +1,84 @@
-# React + Vite
+# Frontend Bundle Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React implementation of the Bundle Builder take-home assignment.
 
-Currently, two official plugins are available:
+This project recreates the provided Figma design as a responsive multi-step bundle builder with a live review panel that updates in real time as the user configures their security system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- React
+- Context API
+- Tailwind CSS
+- JavaScript (ES6+)
+- Local JSON
+- LocalStorage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- Multi-step accordion bundle builder
+- Data-driven UI powered by a local JSON file
+- Reusable component architecture
+- Product cards with:
+  - Optional badges
+  - Variant selection
+  - Quantity steppers
+  - Dynamic pricing
+- Live review panel
+- Quantity synchronization between product cards and review panel
+- Dynamic total and savings calculations
+- Responsive design
+- Persist and restore the user's bundle using LocalStorage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## State Management
+
+Application state is managed using **React Context API**, allowing all builder steps, product cards, and the review panel to stay synchronized from a single shared state.
+
+## Project Structure
+
+```
+src/
+├── assets/
+├── components/
+├── context/
+├── data/
+├── pages/
+├── utils/
+└── App.jsx
+```
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ELAZBAWY/Test_Front.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## Design
+
+The interface was implemented based on the provided Figma design with attention to layout, spacing, typography, and responsive behavior.
+
+## Notes
+
+- The UI is completely data-driven using a local JSON source.
+- React Context API is used for centralized state management.
+- Components are designed to be reusable and maintainable.
+- LocalStorage is used to persist the user's saved configuration between sessions.
+
+## Future Improvements
+
+- Add automated unit and integration tests.
+- Replace the local JSON source with a backend API.
+- Improve accessibility (ARIA attributes and keyboard navigation).
